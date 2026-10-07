@@ -1,69 +1,102 @@
-import Image from "next/image";
+import { Nav } from "../components/Nav";
+import { Hero } from "../components/Hero";
+import { Paletas } from "../components/Paletas";
+import { Categorias } from "../components/Categorias";
+import { ProductSection } from "../components/ProductSection";
+import { Historia } from "../components/Historia";
+import { Noticias } from "../components/Noticias";
+import { Club } from "../components/Club";
+import { Footer } from "../components/Footer";
+
+const ropa = [
+  {
+    name: "Chomba",
+    note: "Piqué técnico, logo pecho",
+    price: "$ 64,990",
+    image: "/images/generated-4.webp",
+    imageContain: true,
+    imageScale: 2.3,
+  },
+  {
+    name: "Remera",
+    note: "Jersey performance",
+    price: "$ 42,990",
+    image: "/images/generated-7.webp",
+    imageContain: true,
+  },
+  {
+    name: "Short",
+    note: "Short stretch, bolsillo",
+    price: "$ 78,990",
+    image: "/images/generated-6.webp",
+    imageContain: true,
+  },
+  {
+    name: "Medias",
+    note: "Tobilleras técnicas x2",
+    price: "$ 18,990",
+    image: "/images/generated-5.webp",
+    imageContain: true,
+    imageScale: 2.45,
+  },
+];
+
+const equipamiento = [
+  {
+    name: "Paleteros",
+    note: "Una o dos palas",
+    price: "$ 52,990",
+    image: "/images/generated-7.png",
+    imageContain: true,
+  },
+  {
+    name: "Pelotas",
+    note: "Tubo de partido",
+    price: "$ 52,990",
+    image: "/images/generated-10.png",
+    imageContain: true,
+  },
+  {
+    name: "Overgrips",
+    note: "Agarre y muñeca",
+    price: "$ 52,990",
+    image: "/images/generated-9.png",
+    imageContain: true,
+  },
+  {
+    name: "Remera",
+    note: "Tela liviana",
+    price: "$ 52,990",
+    image: "/images/generated-11.png",
+    imageContain: true,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="flex w-full flex-col overflow-x-hidden">
+      <Nav />
+      <main className="flex w-full flex-col">
+        <Hero />
+        <Paletas />
+        <Categorias />
+        <ProductSection
+          id="ropa"
+          title="Ropa"
+          description="Prendas técnicas de pádel: corte atlético, logo sutil y tela que acompaña el juego."
+          products={ropa}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <ProductSection
+          id="equipamiento"
+          title="Equipamiento"
+          description="Elegí por dónde empezar: la pala, la ropa o lo que va en el bolso."
+          products={equipamiento}
+        />
+        <Historia />
+        <Noticias />
+        <Club />
       </main>
+      <Footer />
     </div>
   );
 }
