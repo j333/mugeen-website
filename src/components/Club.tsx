@@ -19,7 +19,8 @@ const benefits = [
 
 export function Club() {
   return (
-    <section className="w-full px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
+    <section className="w-full">
+      <div className="mx-auto w-full max-w-[1920px] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
       <div className="relative flex h-auto min-h-[520px] w-full items-stretch overflow-hidden rounded-[32px] lg:h-[600px]">
         <div className="absolute inset-0 bg-[url('/images/AdobeStock_621800072.jpeg')] bg-cover bg-[center_30%]" />
         <div className="absolute inset-0 bg-[var(--ink)]/30" />
@@ -53,6 +54,7 @@ export function Club() {
             Ser miembro
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

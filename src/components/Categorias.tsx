@@ -27,7 +27,8 @@ const categories = [
 
 export function Categorias() {
   return (
-    <section className="flex w-full flex-col gap-7 bg-[var(--white)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
+    <section className="w-full bg-[var(--white)]">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-col gap-7 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
       <div className="flex max-w-[640px] flex-col gap-2">
         <h2 className="font-heading text-[28px] font-semibold leading-[1.02] text-[var(--ink)] sm:text-[36px] lg:text-[40px]">
           Tu juego con Mugeen comienza hoy
@@ -68,6 +69,7 @@ export function Categorias() {
             </div>
           </a>
         ))}
+      </div>
       </div>
     </section>
   );

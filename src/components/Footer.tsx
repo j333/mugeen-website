@@ -17,7 +17,7 @@ const legal = [
 export function Footer() {
   return (
     <footer className="w-full bg-[var(--ink)]">
-      <div className="flex w-full flex-col gap-9 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-col gap-9 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <a href="#" aria-label="Mugeen inicio" className="shrink-0">
             <Logo
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="flex w-full items-center px-5 py-2.5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex w-full max-w-[1920px] items-center px-5 py-2.5 sm:px-8 lg:px-12">
         <div className="flex w-full flex-col items-start justify-between gap-2 px-0 sm:flex-row sm:items-center sm:px-3">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             {legal.map((item, index) => (

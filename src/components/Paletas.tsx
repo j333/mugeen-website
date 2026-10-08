@@ -20,10 +20,8 @@ const paletas = [
 
 export function Paletas() {
   return (
-    <section
-      id="paletas"
-      className="flex w-full flex-col bg-[var(--ink)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]"
-    >
+    <section id="paletas" className="w-full bg-[var(--ink)]">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-col px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
       <div className="grid grid-cols-1 gap-[18px] md:grid-cols-3">
         {paletas.map((item) => (
           <a
@@ -53,6 +51,7 @@ export function Paletas() {
             </div>
           </a>
         ))}
+      </div>
       </div>
     </section>
   );

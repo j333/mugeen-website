@@ -43,7 +43,8 @@ export function Nav() {
   }, [isOpen])
 
   return (
-    <header className="sticky top-0 z-50 flex h-16 w-full shrink-0 items-center justify-between bg-[var(--white)] px-5 sm:px-8 lg:px-12">
+    <header className="sticky top-0 z-50 w-full shrink-0 bg-[var(--white)]">
+      <div className="mx-auto flex h-16 w-full max-w-[1920px] items-center justify-between px-5 sm:px-8 lg:px-12">
       <a
         href="#"
         className="flex flex-1 items-center justify-start"
@@ -97,6 +98,7 @@ export function Nav() {
         >
           {isOpen ? <X size={22} strokeWidth={1.75} /> : <Menu size={22} strokeWidth={1.75} />}
         </button>
+      </div>
       </div>
 
       {isOpen ? (
