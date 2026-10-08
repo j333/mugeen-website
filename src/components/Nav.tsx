@@ -5,10 +5,9 @@ import { Menu, Search, ShoppingBag, User, X } from "lucide-react"
 import { Logo } from "./Logo"
 
 const links = [
-  { label: "Paletas", href: "#paletas", accent: false },
-  { label: "Ropa", href: "#ropa", accent: false },
-  { label: "Equipo", href: "#equipo", accent: false },
-  { label: "Ofertas", href: "#ofertas", accent: true },
+  { label: "Paletas", href: "#paletas" },
+  { label: "Indumentaria", href: "#indumentaria" },
+  { label: "Accesorios", href: "#accesorios" },
 ]
 
 export function Nav() {
@@ -44,28 +43,29 @@ export function Nav() {
   }, [isOpen])
 
   return (
-    <header className="nav-bar sticky top-0 z-50 flex w-full items-center justify-between bg-[var(--white)] px-5 sm:px-8 lg:px-12">
-      <a href="#" className="shrink-0" aria-label="Mugeen inicio" onClick={handleClose}>
+    <header className="sticky top-0 z-50 flex h-16 w-full shrink-0 items-center justify-between bg-[var(--white)] px-5 sm:px-8 lg:px-12">
+      <a
+        href="#"
+        className="flex flex-1 items-center justify-start"
+        aria-label="Mugeen inicio"
+        onClick={handleClose}
+      >
         <Logo className="h-[28px] w-[132px] sm:h-[31px] sm:w-[148px]" />
       </a>
 
-      <nav className="hidden items-center gap-9 md:flex" aria-label="Principal">
+      <nav className="hidden items-center gap-4 md:flex" aria-label="Principal">
         {links.map((link) => (
           <a
             key={link.label}
             href={link.href}
-            className={`font-body text-[15px] leading-[1.4] tracking-[0.2px] transition-opacity hover:opacity-70 ${
-              link.accent
-                ? "font-semibold text-[var(--red)]"
-                : "font-medium text-[var(--ink)]"
-            }`}
+            className="font-body px-2.5 py-2.5 text-[15px] font-medium leading-[1.4] tracking-[0.2px] text-[var(--ink)] transition-opacity hover:opacity-70"
           >
             {link.label}
           </a>
         ))}
       </nav>
 
-      <div className="flex items-center justify-end gap-1 sm:gap-[18px]">
+      <div className="flex flex-1 items-center justify-end gap-[18px]">
         <button
           type="button"
           aria-label="Buscar"
@@ -105,7 +105,7 @@ export function Nav() {
             type="button"
             aria-label="Cerrar menú"
             onClick={handleClose}
-            className="fixed inset-0 top-[76px] z-40 bg-black/40 md:hidden"
+            className="fixed inset-0 top-16 z-40 bg-black/40 md:hidden"
           />
           <nav
             id="menu-mobile"
@@ -117,11 +117,7 @@ export function Nav() {
                 key={link.label}
                 href={link.href}
                 onClick={handleClose}
-                className={`flex min-h-12 items-center font-body text-lg leading-[1.4] tracking-[0.2px] ${
-                  link.accent
-                    ? "font-semibold text-[var(--red)]"
-                    : "font-medium text-[var(--ink)]"
-                }`}
+                className="flex min-h-12 items-center font-body text-lg font-medium leading-[1.4] tracking-[0.2px] text-[var(--ink)]"
               >
                 {link.label}
               </a>

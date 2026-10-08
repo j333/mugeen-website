@@ -20,7 +20,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: 72px;
   }
 
   body {
@@ -34,10 +34,5 @@
 
   .font-body {
     font-family: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
-  }
-
-  .nav-bar {
-    height: 76px;
-    flex-shrink: 0;
   }
 }

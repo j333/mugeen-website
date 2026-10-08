@@ -47,9 +47,9 @@ export function ProductSection({
           <a
             key={product.name}
             href="#"
-            className="group flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-1"
+            className="group flex flex-col transition-transform duration-300 hover:-translate-y-1"
           >
-            <div className="flex h-[320px] items-center justify-center overflow-hidden rounded-[32px] bg-[var(--product-bg)] p-10 sm:h-[360px] lg:h-[400px]">
+            <div className="flex h-[320px] items-center justify-center overflow-hidden rounded-[32px] bg-[var(--product-bg)] p-10 sm:h-[360px]">
               <div
                 className="flex h-full w-full items-center justify-center"
                 style={{ transform: `scale(${product.imageScale ?? 1})` }}
@@ -63,13 +63,13 @@ export function ProductSection({
                 />
               </div>
             </div>
-            <span className="font-heading text-[15px] font-medium text-[var(--ink)]">
+            <span className="font-heading mt-3 text-[15px] font-medium leading-[1.5] text-[var(--ink)]">
               {product.name}
             </span>
-            <span className="font-body -mt-2 text-[13px] text-[var(--muted)]">
+            <span className="font-body mt-1 text-[13px] leading-[1.5] text-[var(--muted)]">
               {product.note}
             </span>
-            <span className="font-body text-base font-semibold text-[var(--ink)]">
+            <span className="font-body mt-3 text-base font-semibold leading-[1.5] text-[var(--ink)]">
               {product.price}
             </span>
           </a>

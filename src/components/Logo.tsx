@@ -1,13 +1,19 @@
 type LogoProps = {
-  className?: string;
-};
+  className?: string
+  tone?: "red" | "white"
+}
 
-export function Logo({ className = "w-[148px] h-[31px]" }: LogoProps) {
+const logoFill = {
+  red: "fill-[var(--red)]",
+  white: "fill-[var(--white)]",
+}
+
+export function Logo({ className = "w-[148px] h-[31px]", tone = "red" }: LogoProps) {
   return (
     <svg
       viewBox="0 0 148.38 31.24"
       xmlns="http://www.w3.org/2000/svg"
-      className={`overflow-visible fill-[var(--red)] ${className}`}
+      className={`overflow-visible ${logoFill[tone]} ${className}`}
       aria-label="Mugeen"
       role="img"
     >

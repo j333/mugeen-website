@@ -1,19 +1,23 @@
 const news = [
   {
     title: "Mugeen redefine la potencia y el estilo con las nuevas PowerPro 2027",
+    category: "Category",
     image: "/images/head.com/f9b89c352ab95538.webp",
   },
   {
     title: "Mugeen apoya la expansión del pádel australiano",
+    category: "Category",
     image: "/images/head.com/8406d34a6ebded89.webp",
   },
   {
     title:
       "Mugeen se convierte en el patrocinador oficial de accesorios del Premier Padel",
+    category: "Category",
     image: "/images/head.com/409b0637cbd8b611.webp",
   },
   {
     title: "Mugeen renueva con la Federación Aragonesa de Pádel",
+    category: "Category",
     image: "/images/head.com/f447492b0a005366.webp",
   },
 ];
@@ -44,9 +48,14 @@ export function Noticias() {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <p className="font-body pb-4 text-lg font-bold leading-[1.4] text-[var(--ink)] sm:text-xl">
-              {item.title}
-            </p>
+            <div className="flex flex-col gap-0 pb-4">
+              <span className="font-body text-[13px] leading-[1.5] text-[var(--muted)]">
+                {item.category}
+              </span>
+              <p className="font-body text-[15px] font-normal leading-[1.4] text-[var(--ink)]">
+                {item.title}
+              </p>
+            </div>
           </a>
         ))}
       </div>

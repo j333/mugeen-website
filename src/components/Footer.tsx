@@ -1,6 +1,10 @@
 import { Logo } from "./Logo";
 
-const shop = ["Palas", "Textil", "Equipo", "Ofertas"];
+const shop = [
+  { label: "Paletas", href: "#paletas" },
+  { label: "Indumentaria", href: "#indumentaria" },
+  { label: "Accesorios", href: "#accesorios" },
+];
 const help = ["Contacto", "Pedidos", "Nosotros"];
 const legal = [
   "Aviso legal",
@@ -16,7 +20,10 @@ export function Footer() {
       <div className="flex w-full flex-col gap-9 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <a href="#" aria-label="Mugeen inicio" className="shrink-0">
-            <Logo className="h-[28px] w-[132px] sm:h-[31px] sm:w-[148px]" />
+            <Logo
+              tone="white"
+              className="h-[28px] w-[132px] sm:h-[31px] sm:w-[148px]"
+            />
           </a>
 
           <div className="flex gap-16 sm:gap-24">
@@ -26,11 +33,11 @@ export function Footer() {
               </span>
               {shop.map((item) => (
                 <a
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="font-body text-sm text-[var(--white)] transition-opacity hover:opacity-70"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </div>

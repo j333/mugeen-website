@@ -8,7 +8,7 @@ import { Noticias } from "../components/Noticias";
 import { Club } from "../components/Club";
 import { Footer } from "../components/Footer";
 
-const ropa = [
+const indumentaria = [
   {
     name: "Chomba",
     note: "Piqué técnico, logo pecho",
@@ -41,7 +41,7 @@ const ropa = [
   },
 ];
 
-const equipamiento = [
+const accesorios = [
   {
     name: "Paleteros",
     note: "Una o dos palas",
@@ -82,16 +82,16 @@ export default function Home() {
         <Paletas />
         <Categorias />
         <ProductSection
-          id="ropa"
-          title="Ropa"
+          id="indumentaria"
+          title="Indumentaria"
           description="Prendas técnicas de pádel: corte atlético, logo sutil y tela que acompaña el juego."
-          products={ropa}
+          products={indumentaria}
         />
         <ProductSection
-          id="equipamiento"
-          title="Equipamiento"
-          description="Elegí por dónde empezar: la pala, la ropa o lo que va en el bolso."
-          products={equipamiento}
+          id="accesorios"
+          title="Accesorios"
+          description="Paleteros, pelotas, overgrips y bolsos para completar el equipo."
+          products={accesorios}
         />
         <Historia />
         <Noticias />

@@ -20,15 +20,18 @@ const paletas = [
 
 export function Paletas() {
   return (
-    <section id="paletas" className="flex w-full flex-col gap-7 bg-[var(--ink)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]">
+    <section
+      id="paletas"
+      className="flex w-full flex-col bg-[var(--ink)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px]"
+    >
       <div className="grid grid-cols-1 gap-[18px] md:grid-cols-3">
         {paletas.map((item) => (
           <a
             key={item.name}
             href="#"
-            className="group flex flex-col rounded-[32px] bg-[var(--paleta-card)] px-6 pb-8 pt-0 transition-transform duration-300 hover:-translate-y-1 sm:px-8"
+            className="group flex flex-col rounded-[32px] bg-[var(--paleta-card)] px-8 pb-8 pt-0 transition-transform duration-300 hover:-translate-y-1"
           >
-            <div className="relative flex h-[420px] w-full items-center justify-center overflow-hidden sm:h-[500px] lg:h-[560px]">
+            <div className="relative flex h-[420px] w-full items-center justify-center overflow-hidden sm:h-[480px] lg:h-[520px]">
               <img
                 src={item.image}
                 alt={`Paleta ${item.name}`}
